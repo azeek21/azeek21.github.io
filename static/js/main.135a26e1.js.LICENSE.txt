@@ -1,0 +1,97 @@
+/*! ./Confetti */
+
+/*! ./Particle */
+
+/*! ./ParticleGenerator */
+
+/*! ./src/ReactConfetti.tsx */
+
+/*! ./utils */
+
+/*! exports provided: ParticleShape, default */
+
+/*! exports provided: ReactConfetti, default */
+
+/*! exports provided: confettiDefaults, Confetti, default */
+
+/*! exports provided: default */
+
+/*! exports provided: norm, lerp, map, clamp, distance, distanceXY, circleCollision, circlePointCollision, inRange, pointInRect, rangeIntersect, rectIntersect, degreesToRads, radsToDegrees, randomRange, randomInt */
+
+/*! no static exports found */
+
+/*! react */
+
+/*! tween-functions */
+
+/*!**********************!*\
+        !*** ./src/utils.ts ***!
+        \**********************/
+
+/*!*************************!*\
+        !*** ./src/Confetti.ts ***!
+        \*************************/
+
+/*!*************************!*\
+        !*** ./src/Particle.ts ***!
+        \*************************/
+
+/*!*******************************!*\
+        !*** ./src/ReactConfetti.tsx ***!
+        \*******************************/
+
+/*!**********************************!*\
+        !*** ./src/ParticleGenerator.ts ***!
+        \**********************************/
+
+/*!*************************************!*\
+        !*** multi ./src/ReactConfetti.tsx ***!
+        \*************************************/
+
+/*!***********************************************!*\
+        !*** ./node_modules/tween-functions/index.js ***!
+        \***********************************************/
+
+/*!**************************************************************************************!*\
+        !*** external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"} ***!
+        \**************************************************************************************/
+
+/**
+ * @license React
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
