@@ -1,6 +1,5 @@
 services:
   nginx:
-    image: nginx:stable-alpine
     build: .
     ports:
       - "80:80"
