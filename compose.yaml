@@ -1,10 +1,10 @@
 services:
     webserver:
-        image: 'nginx:stable-alpine'
+        build: .
         restart: on-failure:5
+        stdin_open: true 
+        tty: true
         volumes:
-            - ./app/:/usr/share/nginx/html/
-            - ./conf/nginx/:/etc/nginx/conf.d/
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/www:/var/www/certbot
         ports:
