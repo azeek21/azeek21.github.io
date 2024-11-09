@@ -12,9 +12,9 @@ services:
             ENVSUBST_VARS: FQDN
             FQDN: askaraliev.uz
         volumes:
-          - ./conf.d:/etc/nginx/user.conf.d:ro
-          - letsencrypt:/etc/letsencrypt
           - ./app:/usr/share/nginx/html
+          - ./conf.d:/etc/nginx/user.conf.d
+          - letsencrypt:/etc/letsencrypt
 volumes:
     letsencrypt:
 
