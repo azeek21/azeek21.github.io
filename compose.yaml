@@ -1,9 +1,19 @@
 services:
-  web:
-    build: .
-    stdin_open: true 
-    tty: true        
-    ports:
-      - "80:80"
-      - "443:443"
+    webserver:
+        image: 'nginx:stable-alpine'
+        restart: on-failure:5
+        volumes:
+            - ./app/:/usr/share/nginx/html/
+            - ./conf/nginx/:/etc/nginx/conf.d/
+            - ./certbot/conf:/etc/letsencrypt
+            - ./certbot/www:/var/www/certbot
+        ports:
+            - 80:80
+            - 443:443
 
+    certbot:
+        image: 'certbot/certbot'
+        volumes:
+            - ./certbot/conf:/etc/letsencrypt
+            - ./certbot/www:/var/www/certbot
+        command: certonly --webroot -v -w /var/www/certbot --force-renewal --email pymanuz@gmail.com -d askaraliev.uz --agree-tos
