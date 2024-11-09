@@ -1,6 +1,9 @@
 services:
   web:
     build: .
+    stdin_open: true 
+    tty: true        
     ports:
-      - "8080:8080"
+      - "80:80"
       - "443:443"
+
