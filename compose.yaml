@@ -5,6 +5,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
+      - ./app:/usr/share/nginx/html
       - ./conf/nginx:/etc/nginx/conf.d
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
@@ -16,5 +17,5 @@ services:
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-    entrypoint: /bin/sh -c 'trap exit TERM; while :; do certbot certonly --webroot -w /var/www/certbot --agree-tos --no-eff-email --email your-email@example.com -d yourdomain.com; sleep 12h; done;'
+    entrypoint: /bin/sh -c 'trap exit TERM; while :; do certbot certonly --webroot -w /var/www/certbot --agree-tos --no-eff-email --email pymanuz@gmail.com -d askaraliev.uz; sleep 24h; done;'
 
