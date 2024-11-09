@@ -1,19 +1,20 @@
+version: '3'
 services:
-  nginx:
-    build: .
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    depends_on:
-      - certbot
-
-  certbot:
-    image: certbot/certbot
-    volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    entrypoint: /bin/sh -c 'trap exit TERM; while :; do certbot certonly --webroot -w /var/www/certbot --agree-tos --no-eff-email --email pymanuz@gmail.com -d askaraliev.uz; sleep 24h; done;'
+    frontend:
+        restart: unless-stopped
+        image: staticfloat/nginx-certbot
+        ports:
+            - 80:80/tcp
+            - 443:443/tcp
+        environment:
+            CERTBOT_EMAIL: pymanuz@gmail.com
+            # variable names are space-separated
+            ENVSUBST_VARS: FQDN
+            FQDN: askaraliev.uz
+        volumes:
+          - ./conf.d:/etc/nginx/user.conf.d:ro
+          - letsencrypt:/etc/letsencrypt
+          - ./app:/usr/share/nginx/html
+volumes:
+    letsencrypt:
 
