@@ -1,19 +1,20 @@
 services:
-    webserver:
-        build: .
-        restart: on-failure:3
-        stdin_open: true 
-        tty: true
-        volumes:
-            - ./certbot/conf:/etc/letsencrypt
-            - ./certbot/www:/var/www/certbot
-        ports:
-            - 80:80
-            - 443:443
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf/nginx:/etc/nginx/conf.d
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    depends_on:
+      - certbot
 
-    certbot:
-        image: 'certbot/certbot'
-        volumes:
-            - ./certbot/conf:/etc/letsencrypt
-            - ./certbot/www:/var/www/certbot
-        command: certonly --webroot -v -w /var/www/certbot --force-renewal --email pymanuz@gmail.com -d askaraliev.uz --agree-tos
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: /bin/sh -c 'trap exit TERM; while :; do certbot certonly --webroot -w /var/www/certbot --agree-tos --no-eff-email --email your-email@example.com -d yourdomain.com; sleep 12h; done;'
+
