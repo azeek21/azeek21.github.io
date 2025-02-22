@@ -25,14 +25,14 @@ body {
     background-image: url(/hi.png);
     background-repeat: no-repeat;
     background-position: 85% bottom;
-    background-size: clamp(50px, 33.333%, 400px) auto;
+    background-size: clamp(50px, 20%, 400px) auto;
 }
 
 h1 {
     line-height: 120%;
 }
 
-article, header {
+article, header, footer {
     max-width: 900px;
     margin: 1rem auto;
     display: flex;
@@ -64,15 +64,37 @@ a {
 
 footer>small {
     font-size: 0.8rem;
-    position: fixed;
-    bottom: 0.3rem;
-    right: 0.3rem;
-    text-orientation: mixed;
-    writing-mode: sideways-lr;
 }
 
 div {
     display: flex;
     gap: 0.3rem;
     flex-wrap: wrap;
+}
+
+ul > li {
+    margin: 0.5rem 0;
+}
+
+.ball {
+    z-index: -100;
+    filter: blur(10px) contrast(0.7);
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(4,116,191,1) 60%, rgba(0,212,255,1) 97%);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    transition: 0.1s;
+    pointer-events: none;
+    position: fixed;
+    animation: spin 9s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+ }
+
+100% {
+    transform: rotate(360deg);
+}
 }
