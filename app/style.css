@@ -80,21 +80,11 @@ ul > li {
     z-index: -100;
     filter: blur(10px) contrast(0.7);
     background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(4,116,191,1) 60%, rgba(0,212,255,1) 97%);
-    height: 4rem;
-    width: 4rem;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
-    transition: 0.1s;
     pointer-events: none;
     position: fixed;
-    animation: spin 9s linear infinite;
+    transition: 100ms;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
- }
-
-100% {
-    transform: rotate(360deg);
-}
-}

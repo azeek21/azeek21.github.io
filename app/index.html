@@ -61,6 +61,7 @@
   </script>
 
   <body itemscope itemtype="https://schema.org/WebSite">
+        <span class="ball"></span>
     <header>
       <meta itemprop="name" content="Azeek's website" />
       <meta
@@ -182,17 +183,23 @@
         >Last modified: <span itemprop="dateModified">2025-02-22</span></small
       >
     </footer>
-        <span class="ball"></span>
     <script defer>
-var _cursor=document.querySelector('.ball');
+  const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+  if (!isReduced) {
+    var _cursor=document.querySelector('.ball');
+    var shared = {};
 
-document.onmousemove = function(e) {  
-    var x= e.clientX;
-    var y= e.clientY;
+    const animateBall = () => {
+        var x= shared.e.clientX-30;
+        var y= shared.e.clientY-30;
+        _cursor.style.transform = `translate(${x}px, ${y}px)`;
+      }
 
-    _cursor.style.left= x+'px';
-    _cursor.style.top= y+'px';
-};
-    </script
+    document.onmousemove = function(e) {  
+      shared.e = e;
+      requestAnimationFrame(animateBall); 
+    };
+  }
+      </script
   </body>
 </html>
