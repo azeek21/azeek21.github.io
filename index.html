@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+function initTheme() {
+  const storageSlug = "data-theme";
+  let theme = localStorage.getItem(storageSlug);
+  if (!theme) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      theme = "macchiato";
+    } else {
+      theme = "latte";
+    }
+  }
+  document.querySelector("html").setAttribute(storageSlug, theme);
+}
+initTheme();
+    </script>
+    <meta charset="UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="JdnVqHnt2SkoR3PmGYW36hA7IOPrsdmZUIDf1N6QLFY"
+    />
+    <meta http-equiv="last-modified" content="202503170817" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <meta property="og:url" content="http://askaraliev.uz/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="askaraliev.uz" />
+    <meta property="og:title" content="Azeek's personal website" />
+    <meta
+      property="og:description"
+      content="Askaraliev Abdulaziz a.k.a azeek · Software engineer · Doing Frontend development at Sber · Need help? Contact me at askaraliev0516@gmail.com"
+    />
+    <meta
+      property="og:image"
+      itemprop="image"
+      content="http://askaraliev.uz/logo.png"
+    />
+    <meta
+      name="description"
+      content="Abdulaziz Askaraliev a.k.a Azeek. Enthusiast frontend developer"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="alternate" hreflang="en" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="en-Us" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="en-Gb" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="en-Ca" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="ru" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="ru-Ru" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="ru-Md" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="uz" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="uz-Cyrl" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="uz-Cyrl-UZ" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="uz-Latn" href="http://askaraliev.uz/" />
+    <link rel="alternate" hreflang="uz-Latn-UZ" href="http://askaraliev.uz/" />
+
+    <title>Azeek's minimalistic website</title>
+  </head>
+
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-0MYS474KNM"
+  ></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-0MYS474KNM");
+  </script>
+
+  <body itemscope itemtype="https://schema.org/WebSite">
+    <span id="uwu" class="ball">(•‿•) ﾉ</span>
+    <header>
+      <meta itemprop="name" content="Azeek's website" />
+      <meta
+        itemprop="alternateName"
+        content="Abdulaziz Askaraliev's simple website"
+      />
+      <h1
+        title="real name: Abdulaziz. you're gonna have a hard time reading it anyways :)"
+        itemprop="about"
+      >
+        Hello there <small>(•‿•)</small><sup> ﾉ</sup>
+      </h1>
+    </header>
+    <article itemscope itemtype="https://schema.org/Person">
+      <section>
+        <h2 id="about">About</h2>
+        <p itemprop="description">
+          I'm <span itemprop="givenName">Abdulaziz</span>
+          <span itemprop="familyName">Askaraliev</span>.
+          <span data-comment="time flies, innit?">23</span> years old
+          <span class="hlt">Frontend enthusiast</span>
+          . I like touching stuff like: bleeding edge tech, books,
+          keyboard, someone else's code, open source, rocks. When I'm free
+          (which I'm not mostly) I like learning about new stuff or things I use
+          daily but never had the opportunity do dive deep into Hows and Whys. I
+          like watching Dr.House.
+        </p>
+      </section>
+      <section>
+        <h3>Currently</h3>
+        <p>
+          Currently working at <span class="hlt">Sber</span> as a
+          <span class="hlt" itemprop="jobTitle">Frontend developer</span> on large scale
+          internal management application. Trying my hands in backed with Golang
+          on my free time. Check out my journey at my
+          <a
+            href="https://github.com/azeek21/golang-basement"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Golang basement </a
+          >. Also trying to bring some value to the community with my
+          <a
+            href="https://qishloqi-dev.bearblog.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Blog</a>
+          and
+          <a
+            href="https://t.me/qishloqi_dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Telegram channel</a>.
+        </p>
+      </section>
+
+      <section>
+        <h3>My stack</h3>
+        <div>
+          <p class="tag" itemprop="knowsAbout">TypeScript</p>
+          <p class="tag" itemprop="knowsAbout">JavaScript</p>
+          <p class="tag" itemprop="knowsAbout">React</p>
+          <p class="tag" itemprop="knowsAbout">NextJs</p>
+          <p class="tag" itemprop="knowsAbout">Node</p>
+          <p class="tag" itemprop="knowsAbout">TailwindCSS</p>
+        </div>
+
+        <h4>Additional</h4>
+        <div>
+          <p class="tag" itemprop="knowsAbout">C</p>
+          <p class="tag" itemprop="knowsAbout">Go</p>
+          <p class="tag" itemprop="knowsAbout">Python</p>
+          <p class="tag" itemprop="knowsAbout">Linux</p>
+          <p class="tag" itemprop="knowsAbout">Git</p>
+        </div>
+      </section>
+
+      <section>
+      <h3>I speak</h3>
+      <div class="vflex">
+        <p class="tag"><span itemprop="knowsLanguage">English</span></p>
+        <p class="tag"><span itemprop="knowsLanguage">Russian</span></p>
+        <p class="tag"><span itemprop="knowsLanguage">Uzbek</span></p>
+      </div>
+      </section>
+
+      <section>
+      <h3>Education</h3>
+      <div class="vflex">
+          <ul>
+            <li>School 21 -
+          <i> specialized school for programmers by Sberbank</i>
+         </li>
+            <li>
+INHA university. Inchhon, Korea
+            </li>
+          </ul>
+      </div>
+        <h3 title="stop by to say hi">Contacts:</h3>
+        <ul class="vflex">
+        <li>
+          <meta itemprop="sameAs" content="https://t.me/foffnow" />
+            Telegram: 
+          <a
+            href="http://t.me/foffnow"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@foffnow</a
+          >
+        </li>
+        <li>
+            E-mail:
+          <meta itemprop="sameAs" content="https://github.com/azeek21" />
+          <a href="mailto:askaraliev0516@gmail.com"
+            > <span itemprop="email">askaraliev0516@gmail.com</span></a
+          >
+        </li>
+      </ul>
+      <section>
+    </article>
+
+    <h3
+      data-test-id="Hey, you found a gem. Go buy yourself an incecream :)"
+    ></h3>
+    <footer>
+      <small>Last modified: <span itemprop="dateModified">2025-03-17</span></small>
+      <div>
+        <p>Theme:</p>
+      <button onclick="setTheme('latte')">Latte (light)</button>
+      <button onclick="setTheme('macchiato')">Macchiato (dark)</button>
+      <button onclick="setTheme('mocha')">Mocha (dark)</button>
+      <button onclick="setTheme('system')">System</button>
+      </div>
+    </footer>
+    <script src="/main.js" defer></script>
+<!-- preload popcat :) -->
+    <img style="display: none;" src="/not-popped.png" />
+    <img style="display: none;" src="/popped.png" />
+  </body>
+</html>
