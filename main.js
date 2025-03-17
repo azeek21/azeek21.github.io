@@ -51,6 +51,7 @@ function initpopcat() {
 function setTheme(theme) {
   localStorage.setItem(THEME_SLUG, theme);
   document.querySelector("html").setAttribute(THEME_SLUG, theme);
+  window.location.reload(); // safari mobile fix
 }
 
 function initThemeChangeWatcher() {
