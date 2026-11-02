@@ -1,0 +1,8 @@
+# all dotfiles and dot-folders
+.*
+.gitignore
+.git/
+
+# but keep .well-known (needed for things like security.txt, domain verification, Apple/Android app links)
+!.well-known
+!.well-known/**
