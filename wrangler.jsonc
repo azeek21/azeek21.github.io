@@ -1,0 +1,8 @@
+{
+  "name": "main-static-website-askaraliev-uz",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./",          // your built site
+    "not_found_handling": "404" // or "single-page-application" for React/Vue SPAs
+  }
+}
